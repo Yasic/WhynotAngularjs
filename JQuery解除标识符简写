@@ -1,0 +1,15 @@
+1.解除$简写
+$.noConflict();
+这里一旦使用后面将必须使用JQuery全称进行操作，否则无效。
+
+2.改写$简写
+var jq = $.noConflict();
+之后可以使用jq来代表JQuery。
+
+3.解除简写但是在函数内使用
+$.noConflict();
+jQuery(document).ready(function($){
+  $("button").click(function(){
+    $("p").text("jQuery 仍在运行！");
+  });
+});
