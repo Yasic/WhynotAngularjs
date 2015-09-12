@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    table tr:nth-child(odd){
+        background: #545454;
+    }
+    table tr:nth-child(even){
+        background: #f7f8f3;
+    }
+</style>
+<head>
+    <title></title>
+</head>
+<body style="margin: 0;padding:0">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script type="text/javascript" src = "jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button.testbutton").click(function(){
+            /*$("div.ss").toggle(1000);*/
+            /*$("div.ss").fadeTo(1000,0.3);*/
+            /*$("div.ss").slideToggle(1000);*/
+            /*$("div.ss").animate({top:'+=30px',opacity:'toggle'});*/
+            /*alert("html:"+$("div.ss").text("noop"));*/
+            $("div#title").empty();
+        });
+        /*$("div.ss").css("width",400);*/
+        $("div.ss").css({"margin":0,"width":400});
+        $("div.ss").css("padding",0);
+        $("div.ss").css("background-color","#3399ff");
+        $("div.ss").css("position","relative");
+    })
+</script>
+<div id = "title">
+    <div class="ss">test</div>
+</div>
+<button class = "testbutton">click please</button>
+<div ng-app="app" ng-controller="fuckctrl">
+    <form ng-submit="requestfunding()">
+        starting:<input ng-model="funding.starting"><br>
+        reply:{{funding.reply}}
+        <button>submit</button>
+        <button ng-click="resetfunding()">submit</button>
+    </form>
+    <form name = "myform" novalidate>
+        name:<br>
+        <input type="text" ng-model="username" name="username" required>
+        <span style="color:red" ng-show="myform.username.$dirty && myform.username.$invalid">
+        <span ng-show="myform.username.$error.required">Username is must</span>
+        </span>
+        <br>
+        email:<br>
+        <input type="text" ng-model="useremai" name="useremai" required>
+        <span style="color:red" ng-show="myform.useremai.$dirty && myform.useremai.$invalid">
+        <span ng-show="myform.useremai.$error.required">Useremail is must</span>
+        </span>
+        <br>
+        <input type="submit" ng-disabled="myform.username.$dirty && myform.username.$invalid || myform.useremai.$dirty && myform.useremai.$invalid">
+        <span style="color:red" ng-show="myform.username.$dirty && myform.username.$invalid || myform.useremai.$dirty && myform.useremai.$invalid">
+            <span ng-show="myform.username.$dirty && myform.username.$invalid || myform.useremai.$dirty && myform.useremai.$invalid">
+                Error!!
+            </span>
+        </span>
+    </form>
+    <input type="text" ng-model="filterbuf">
+    <div ng-include="'test1.html'"></div>
+    <!--<table>
+        <tr ng-repeat="x in names">
+            <td>{{$index+1}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
+    <input type="number" ng-model="firstnumber">
+    <input type="number" ng-model="secondnumber">
+    <p>sum = {{firstnumber + secondnumber | currency}}</p>
+    <button ng-click="count = count +1">click me</button>
+    <p>
+        <input type="checkbox" ng-model="test">
+        I am waiting for somebody.
+    </p>
+    <p>{{count}}</p>-->
+</div>
+<div name = "test">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+<script src = "testappname.js"></script>
+<script src = "testcontroller.js"></script>
+</body>
+</html>
+
