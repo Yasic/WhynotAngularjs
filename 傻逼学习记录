@@ -2,3 +2,8 @@
 css统一设置属性如下
 display:inline;
 float: left;
+
+2.如何水平居中
+width: 1080px;
+margin-right: auto;
+margin-left: auto;
