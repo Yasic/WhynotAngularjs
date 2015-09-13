@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<script src = "Index.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.3.9/angular.min.js"></script>
+<script type="text/javascript" src = "Index.js"></script>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Noop</title>
@@ -15,10 +16,10 @@
         </div>
         <div id = "index_title_line"></div>
         <div class="horizontalelement_center">
-            <img id = "title_githubaccount" ng-click="clickdevent()" class = "title_account" src="Images/ic_github_circle_grey600_48dp.png">
-            <img id = "title_linkdinaccount" class = "title_account" src="Images/ic_linkedin_box_grey600_48dp.png">
+            <img id = "title_githubaccount" ng-click="clickdgithub()" class = "title_account" src="Images/ic_github_circle_grey600_48dp.png">
+            <img id = "title_linkdinaccount" ng-click="clickdlinkdin()" class = "title_account" src="Images/ic_linkedin_box_grey600_48dp.png">
             <img id = "title_rightaccount" class = "title_account" src="Images/ic_emoticon_devil_grey600_48dp.png">
-            <img id = "title_androidaccount" class = "title_account" src="Images/ic_android_grey600_48dp.png">
+            <img id = "title_androidaccount" ng-click="clickdandroid()" class = "title_account" src="Images/ic_android_grey600_48dp.png">
             <img id = "title_iosaccount" class = "title_account" src="Images/ic_apple_grey600_48dp.png">
         </div>
     </div>
