@@ -1,32 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "index_title" style="height: 100%">
 <script src="http://apps.bdimg.com/libs/angular.js/1.3.9/angular.min.js"></script>
+<script type="text/javascript" src = "angular.js"></script>
 <script type="text/javascript" src = "Index.js"></script>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Noop</title>
     <link rel=stylesheet type="text/css" href="Index.css">
 </head>
-<body style="text-align: center">
+<body style="height: 100%">
 <div class = "title_noop">
-    <div id = "index_title" ng-app="index_title" ng-controller="index_title_controller">
+    <div id="index_title" ng-controller="index_title_controller as itc">
         <div class = "horizontalelement_center">
             <img id = "title_leftimg" src="Images/notepad.png">
             <div id = "title_leftpart">Noop of Yasic</div>
         </div>
         <div id = "index_title_line"></div>
         <div class="horizontalelement_center">
-            <img id = "title_githubaccount" ng-click="clickdgithub()" class = "title_account" src="Images/ic_github_circle_grey600_48dp.png">
-            <img id = "title_linkdinaccount" ng-click="clickdlinkdin()" class = "title_account" src="Images/ic_linkedin_box_grey600_48dp.png">
+            <img id = "title_githubaccount" ng-click="itc.go('github')" class = "title_account" src="Images/ic_github_circle_grey600_48dp.png">
+            <img id = "title_linkdinaccount" ng-click="itc.go('linkedin')" class = "title_account" src="Images/ic_linkedin_box_grey600_48dp.png">
             <img id = "title_rightaccount" class = "title_account" src="Images/ic_emoticon_devil_grey600_48dp.png">
-            <img id = "title_androidaccount" ng-click="clickdandroid()" class = "title_account" src="Images/ic_android_grey600_48dp.png">
+            <img id = "title_androidaccount" ng-click="itc.go('android')" class = "title_account" src="Images/ic_android_grey600_48dp.png">
             <img id = "title_iosaccount" class = "title_account" src="Images/ic_apple_grey600_48dp.png">
         </div>
     </div>
 </div>
-<div id = "userinfolayout">
+<div id = "belowFullPage" >
+    <div id = "index_drawarlayout" ng-controller="drawarlayout_controller as dlc" >
+        <div id = "index_drawarlayout_menu">
+            <div class = "drawerLayoutMenuList">
+                <img  class = "drawerLayoutImg" src = "Images/ic_file_outline_black_48dp.png" ><div class = "drawerLayoutMenu">Notefiles</div>
+            </div>
+            <div class = "drawerLayoutMenuList">
+                <img  class = "drawerLayoutImg" src = "Images/ic_bell_black_48dp.png"><div class = "drawerLayoutMenu">Reminders</div>
+            </div>
+            <div class = "drawerLayoutMenuList">
+                <img  class = "drawerLayoutImg" src = "Images/ic_server_black_48dp.png"><div class = "drawerLayoutMenu">Finances</div>
+            </div>
+            <div class = "drawerLayoutMenuList">
+                <img  class = "drawerLayoutImg" src = "Images/ic_settings_black_48dp.png"><div class = "drawerLayoutMenu">Setting</div>
+            </div>
+        </div>
+    </div>
+    <div id = "fragmentPage">
+        <div id = "fragmentTitle">
+            <div id = "addElement">Create</div>
+            <div id = "sortElement">
+                <img class = "fragmentButtonImg" src="Images/ic_sort_variant_black_48dp.png">
+            </div>
+            <div id = "searchElement">
+                <img class = "fragmentButtonImg" src="Images/ic_magnify_black_48dp.png">
+            </div>
+        </div>
+        <div class="insectionLine"></div>
+    </div>
+</div>
+<div id = "footbar">
+    <div class = "horizontalelement_center">All content copyright Noop © 2015</div>
+</div>
+<!--<div style="position:absolute;bottom: 0">test</div>-->
+<div id = "userinfolayout"  style = "display: none">
     <div id = "userinfo">
-        <img id = "user_img" src="Images/ic_account_circle_white_48dp.png">
+        <img id = "user_img" ng-src="Images/ic_account_circle_white_48dp.png">
         <div id = "user_name">余烜Yasic</div>
         <div id = "user_email">2207793765@qq.com</div>
     </div>
