@@ -1,0 +1,258 @@
+body{
+    margin:0;
+    padding:0;
+    text-align: center;
+    background-color: #f7f8f3;
+}
+
+#title_leftpart,#user_name,.drawerLayoutMenu,#addElement{
+    font-family: "Futura-Book";
+}
+
+#index_title{
+    width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#title_leftimg{
+    width: 100px;
+    height: 100px;
+    margin-left: 0em;
+    margin-bottom: 0.1em;
+    margin-top: 32px;
+}
+
+#title_leftpart{
+    width: 8em;
+    height: 1.2em;
+    margin-top: 0em;
+    margin-bottom: 0.3em;
+    margin-right: auto;
+    margin-left: auto;
+    /*font-size: 2.4em;*/
+    font-size: 26px;
+    font-weight:lighter;
+    color:#f7f8f3;
+}
+
+#index_title_line {
+    width: 27em;
+    height: 1px;
+    margin:0px auto;
+    background-color: #545454;
+}
+
+
+
+#userinfolayout{
+    float: right;
+    margin-right: 30px;
+    width: 380px;
+    height: 240px;
+    text-align: center;
+    box-shadow:1px 0px 3px 1px #a9a9a9;
+    border: 1px solid #878787;
+    border-top: none;
+    border-radius: 7px;
+}
+
+#userinfo{
+    width: 100%;
+    height: 240px;
+    background-color: #03a9f4;
+    border-radius: 7px;
+   /* background-image: url("Images/md-27.jpg");*/
+}
+
+#user_img{
+    width: 72px;
+    height: 72px;
+    margin-top: 32px;
+}
+
+#user_name{
+    margin-top: 7px;
+    font-size: 1.4em;
+}
+
+#user_email{
+    margin-top: 7px;
+    font-size: 1.2em;
+}
+
+#index_drawarlayout{
+    float: left;
+    height: 16em;
+    /*margin-right: 0em;*/
+    margin-top: 1em;
+    margin-right: 16px;
+    /*text-align: left;*/
+}
+
+#belowFullPage{
+    width: 100%;
+}
+
+#index_drawarlayout_menu{
+    padding-top: 16px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    /*height: 16em;*/
+    background-color: #f7f8f3;
+    box-shadow:1px 0px 3px 1px #a9a9a9;
+    border: 1px solid #878787;
+    border-top: none;
+    border-radius: 7px;
+}
+
+#footbar{
+    position: fixed;
+    width: 100%;
+    height: 1em;
+    padding-bottom: 3px;
+    bottom: 0;
+    background-color: #bababa;
+}
+
+#fragmentPage{
+    float: left;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    /*padding-top: 1.5em;*/
+    padding-top: 16px;
+    width: 810px;
+    height: 40em;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px #a9a9a9;
+    border: 1px solid #bababa;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 3px;
+}
+
+#fragment{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+#fragmentTitle{
+    width: 46em;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addElement{
+    float: left;
+    background-color:#67BA6D;
+    width: 150px;
+    height: 38px;
+    border-radius: 16px;
+    font-size: 28px;
+    padding-top: 4px;
+    color: #f7f8f3;
+    box-shadow: 0px 1px 1px #545454;
+}
+
+#sortElement{
+    float: right;
+    width: 42px;
+    height: 42px;
+    padding-top: 4px;
+    margin-left: 16px;
+}
+
+#searchElement{
+    float: right;
+    width: 42px;
+    height: 42px;
+    padding-top: 4px;
+}
+
+.title_noop{
+    width: 100%;
+    height: 14em;
+    padding-bottom: 7px;
+    background-color: #06cdff;
+    box-shadow: 0px 3px 1px #a9a9a9;
+    text-align: center;
+}
+
+.horizontalelement_left{
+    display: inline;
+    float: left;
+}
+
+.horizontalelement_right{
+    display: inline;
+    float: right;
+}
+
+.horizontalelement_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title_account{
+    width: 32px;
+    height: 32px;
+    margin-top: 1em;
+    margin-left: 7px;
+    margin-right: 7px;
+    cursor:pointer;
+}
+
+.drawerLayoutMenuList{
+    float: inherit;
+    height: 26px;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px solid #bababa;
+    border-radius: 7px;
+    margin-bottom: 16px;
+}
+
+.drawerLayoutImg{
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin-left: 7px;
+}
+
+.drawerLayoutMenu{
+    float: left;
+    font-size: 18px;
+    font-weight:lighter;
+    color:#545454;
+    margin-left: 0.3em;
+    margin-top: 3px;
+}
+
+.insectionLine{
+    width: 48em;
+    height: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #545454;
+}
+
+.fragmentButtonImg{
+    width: 42px;
+    height: 42px;
+    float: left;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+@font-face {
+    font-family: 'Futura-Book';
+    src: url('Fonts/Futura-Book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
