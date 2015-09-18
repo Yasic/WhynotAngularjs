@@ -1,0 +1,31 @@
+from django.http import HttpResponse,Http404
+import datetime
+
+def hello(request):
+    return HttpResponse("Hello world")
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>" %now
+    return HttpResponse(html)
+
+def hours_ahead(request,offset):
+    try:
+        offset = int(offset)
+    except ValueError:
+        return Http404()
+    de = datetime.datetime.now() + datetime.timedelta(hours = offset)
+    html = "<html><body>It is now %s.</body></html>" %de
+    return HttpResponse(html)
+
+
+from django.conf.urls import include, url
+from django.contrib import admin
+from Testproject.views import current_datetime
+from Testproject.views import hours_ahead
+
+urlpatterns = [
+    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',current_datetime),
+    url(r'^time/plus/(\d{1,2})/$',hours_ahead)
+]
