@@ -1,8 +1,23 @@
 from django.http import HttpResponse,Http404
 import datetime
+from django.shortcuts import render
+from django.template.loader import  get_template
+from django.template import Context
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 def hello(request):
-    return HttpResponse("Hello world")
+    context          = {}
+    context['hello'] = ''
+    return render(request, 'Index.html', context)
+
+def indexpage(request):
+    t = get_template("Index.html")
+    html = t.render()
+    return HttpResponse(html)
+
+def indexpageff(request):
+    return render_to_response('Index.html',{},context_instance=RequestContext(request))
 
 def current_datetime(request):
     now = datetime.datetime.now()
@@ -17,3 +32,4 @@ def hours_ahead(request,offset):
     de = datetime.datetime.now() + datetime.timedelta(hours = offset)
     html = "<html><body>It is now %s.</body></html>" %de
     return HttpResponse(html)
+
