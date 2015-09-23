@@ -1,0 +1,19 @@
+1 .  在setting.py中
+    STATIC_ROOT = 'static/'
+    STATIC_URL = 'static/'
+     
+2.  在模板页面中
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js"></script>
+     
+3.  在urls.py的配置中
+    from django.conf.urls.static import static
+    urlpatterns = patterns('',
+        url(r'^admin/', include(admin.site.urls)),
+        (r'^$', latest_books),
+    ) + (static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
+ 
+4.  在views.py对应的输出视图中
+return render_to_response('index.html', {
+        'STATIC_URL': STATIC_URL,
+    })
